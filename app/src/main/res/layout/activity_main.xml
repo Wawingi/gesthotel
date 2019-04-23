@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fundo"
+    tools:context="com.example.wawingisebastiao.gesthotel.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text=" LOGIN "
+                        android:textStyle="bold"
+                        android:textSize="27sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"/>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edituser"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Utilizador"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="60dp"
+                    android:drawableLeft="@drawable/ic_person_black_24dp"/>
+
+                <EditText
+                    android:id="@+id/editpassword"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Senha"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="12dp"
+                    android:drawableLeft="@drawable/ic_lock_open_black_24dp"/>
+
+                <Button
+                    android:id="@+id/btnlogar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="ENTRAR"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/fundo"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/btn_curvo"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
