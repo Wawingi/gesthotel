@@ -163,11 +163,6 @@
                     android:layout_height="wrap_content"
                     android:text="Livre"/>
                 <RadioButton
-                    android:id="@+id/rdocupado"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ocupado"/>
-                <RadioButton
                     android:id="@+id/rdmanutec"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

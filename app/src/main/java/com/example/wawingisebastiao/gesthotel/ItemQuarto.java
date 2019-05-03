@@ -73,9 +73,6 @@ public class ItemQuarto extends AppCompatActivity {
                     case R.id.rdsujo:
                         novoestado = "SUJO";
                         break;
-                    case R.id.rdocupado:
-                        novoestado = "OCUPADO";
-                        break;
                     case R.id.rdmanutec:
                         novoestado = "MANUTENÇÃO";
                         break;

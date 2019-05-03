@@ -69,10 +69,16 @@ public class Pesquisa extends AppCompatActivity {
                 StrictMode.setThreadPolicy((new StrictMode.ThreadPolicy.Builder().permitNetwork().build()));
                 ConnectivityManager cm = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
                 final NetworkInfo netInfo = cm.getActiveNetworkInfo();
-                pesquisa = Integer.parseInt(txtpesquisa.getText().toString());
 
-                pesquisarQuarto();
-
+                boolean validar = true;
+                if (txtpesquisa.getText().length() == 0) {
+                    txtpesquisa.setError("Número do quarto requerido!");
+                    txtpesquisa.requestFocus();
+                    validar = false;
+                }if(validar) {
+                    pesquisa = Integer.parseInt(txtpesquisa.getText().toString());
+                    pesquisarQuarto();
+                }
             }
         });
 
@@ -110,8 +116,11 @@ public class Pesquisa extends AppCompatActivity {
 
                             if(isErro){
                                 Toast.makeText(getApplicationContext(),"Nenhum Quarto encontrado, por favor verifique o número e tente novamente!",Toast.LENGTH_LONG).show();
+                                txtquarto.setText("");
+                                txttipologia.setText("");
+                                txtandar.setText("");
+                                txtestado.setText("");
                             }else{
-
                                 txtquarto.setText(String.valueOf(jsonObject.getInt("quarto")));
                                 txttipologia.setText(jsonObject.getString("tipologia"));
                                 txtandar.setText(jsonObject.getString("andar"));
