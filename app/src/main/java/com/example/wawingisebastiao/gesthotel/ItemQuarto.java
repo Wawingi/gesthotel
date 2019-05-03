@@ -91,6 +91,12 @@ public class ItemQuarto extends AppCompatActivity {
                 editarEstado();
             }
         });
+
+        //Back Button config
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
     }
 
     public void editarEstado(){
@@ -138,31 +144,12 @@ public class ItemQuarto extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
 
-    //Menu opções de três pontos
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu,menu);
-        return true;
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.item1:
-
-                return true;
-
-            case R.id.item2:
-
-                return true;
-
-            case R.id.item3:
-                caixaDialogo();
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
+            this.finish();
         }
+        return super.onOptionsItemSelected(item);
     }
 
     public void caixaDialogo(){
@@ -186,5 +173,6 @@ public class ItemQuarto extends AppCompatActivity {
                 });
         builder.create().show();
     }
+
 
 }
