@@ -149,8 +149,10 @@ public class ListarQuarto extends AppCompatActivity {
                 Intent intent = new Intent(ListarQuarto.this,Pesquisa.class);
                 startActivity(intent);
                 return true;
-            case R.id.item2:
 
+            case R.id.item2:
+                Intent intent2 = new Intent(ListarQuarto.this,Estatistica.class);
+                startActivity(intent2);
                 return true;
 
             case R.id.item3:

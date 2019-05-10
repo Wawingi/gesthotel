@@ -13,13 +13,13 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".ListarQuarto"></activity>
         <activity android:name=".ItemQuarto"></activity>
         <activity android:name=".Pesquisa"></activity>
+        <activity android:name=".Estatistica"></activity>
     </application>
 
 </manifest>
